@@ -75,5 +75,5 @@ theme: TKL
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@gitcafe.com:harrycheng/harrycheng.git
-  branch: gitcafe-pages
+  repo: git@github.com:harrycheng/harrycheng.github.io.git
+  branch: master
