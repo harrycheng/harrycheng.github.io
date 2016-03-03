@@ -1,0 +1,46 @@
+# config
+cover: /img/bg_img.jpg
+logo: /img/logo.png
+top_saying:
+- title: YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.
+- content: 罗马不是一天建成的，大牛不是一下练成的。
+bottom_saying: Rome Wasn't Built in a Day!
+# Content
+excerpt_link: Read More
+archive: 1
+category: 1
+tag: 1
+#rss: /atom.xml
+about: /www.baidu.com/
+highlightjs: vs
+
+#Works
+works:
+#- works_name: AAA
+#  works_url: /
+#- works_name: BBB
+#  works_url: /atom.xml
+
+#duoshuo name
+duoshuo: harrycheng
+
+# Miscellaneous
+github: https://github.com/
+twitter: https://twitter.com/
+facebook: https://www.facebook.com/
+google: https://google.com/
+weibo: http://weibo.com/
+
+#about  timeline
+timeline:
+- num: 1
+  word: "2013/6月 大学毕业，从事.NET开发"
+- num: 2
+  word: "2014/04/15 开始在GitCafe 搭建自己的私人博客，记录自己的经验，回馈大众"
+
+#Links
+links:
+- name: Kieran
+  link: http://go.kieran.top/
+- name: Cnblog
+  link: http://www.cnblogs.com/harrycheng
