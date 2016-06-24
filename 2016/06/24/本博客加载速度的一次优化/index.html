@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Hello World | HarryCheng&#39;s Blog</title>
+  <title>本博客加载速度的一次优化 | HarryCheng&#39;s Blog</title>
   <!-- Meta data -->
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -212,43 +212,44 @@
         <div class="row col-md-offset-2">
             <div class="col-md-8">
     			<span class="post-meta">
-      <time datetime="2016-05-19T08:10:14.292Z" itemprop="datePublished">
-          2016-05-19
+      <time datetime="2016-06-24T15:49:07.000Z" itemprop="datePublished">
+          2016-06-24
       </time>
     
+    
+    | 
+    <a href='/tags/前端/'>前端</a>
+    
+    
 </span>
-                <h1>Hello World</h1>
+                <h1>本博客加载速度的一次优化</h1>
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+      		<h3 id="博客搭建成功后一直没有绑定独立域名，访问时使用github的二级域名,速度的问题一直也没太在意-_最近在万网买了域名绑定后,发现网站比较慢-所以决定用优化一下-">博客搭建成功后一直没有绑定独立域名，访问时使用github的二级域名,速度的问题一直也没太在意. 最近在万网买了域名绑定后,发现网站比较慢.所以决定用优化一下.</h3><blockquote>
+<p> 原加载速度如下图<br> <img src="/images/optimize_blog/before_optimize.png" alt=""></p>
+</blockquote>
+<h3 id="我发现,加载最慢的就是背景图片1-jpg_,_除去一些不能再压缩的js,_css,_最后就是一些外链的woff2字体文件,_所以优化就分两部走:">我发现,加载最慢的就是背景图片1.jpg , 除去一些不能再压缩的js, css, 最后就是一些外链的woff2字体文件, 所以优化就分两部走:</h3><h4 id="1-_压缩图片">1. 压缩图片</h4><pre><code>使用一些图片压缩工具,将背景压缩变小.
+</code></pre><h4 id="2-将字体文件放在本地">2.将字体文件放在本地</h4><pre><code>下载字体文件,放在本地.
+</code></pre><h3 id="经过简单的优化,_我的博客">经过简单的优化, 我的博客</h3><blockquote>
+<p>现加载速度如下图<br> <img src="/images/optimize_blog/after_optimize.png" alt=""></p>
+</blockquote>
+<p>效果还是比较明显的.</p>
 
             <div class="clearfix"></div>
             <hr class="nogutter">
         </div>
         <nav class="pagination" role="pagination">
     
-    <a class="pull-left" href="/2016/06/24/本博客加载速度的一次优化/" style="float: left;">
-        ← 本博客加载速度的一次优化
-    </a>
     
-    
-    <a class="pull-right" href="/2016/01/09/滑动门与CSS3实现圆角/">
-        滑动门与CSS3实现圆角 →
+    <a class="pull-right" href="/2016/05/19/hello-world/">
+        Hello World →
     </a>
     
 </nav>
 
         <div class="duoshuo">
-<div class="ds-thread" data-thread-key="2016/05/19/hello-world/" data-title="Hello World" data-url="http://harrycheng.tk/2016/05/19/hello-world/"></div>
+<div class="ds-thread" data-thread-key="2016/06/24/本博客加载速度的一次优化/" data-title="本博客加载速度的一次优化" data-url="http://harrycheng.tk/2016/06/24/本博客加载速度的一次优化/"></div>
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"harrycheng"};
 (function() {
