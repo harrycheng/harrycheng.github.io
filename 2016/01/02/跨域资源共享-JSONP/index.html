@@ -226,31 +226,34 @@
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<h3 id="本文介绍">本文介绍</h3><p>1、JSONP 跨域资源共享是利用什么原理实现的。<br>2、后端支持JSONP要做什么。</p>
+      		<p>###本文介绍<br>1、JSONP 跨域资源共享是利用什么原理实现的。<br>2、后端支持JSONP要做什么。</p>
 <p>同源策略简单的说，就是：AJAX请求若是一个“异源”地址， 浏览器不允许读取返回的内容。</p>
-<h4 id="1、JSONP_跨域资源共享原理">1、JSONP 跨域资源共享原理</h4><blockquote>
+<p>####1、JSONP 跨域资源共享原理</p>
+<blockquote>
 <p><code>&lt;script&gt;</code> 标签, 同源策略不对它做限制。它具有跨域加载资源的能力，同时，对一段JavaScript脚本来说， 其源与它在存储的地址无关，而取决脚本被加载的页面。也就是说，在一个页面中，使用<code>&lt;script&gt;</code>标签加载的、不同域名下存储的的脚本，均与当前页面同域。  这就是JSONP 跨域的原理。</p>
 </blockquote>
-<h4 id="2、后端支持JSONP">2、后端支持JSONP</h4><blockquote>
+<p>####2、后端支持JSONP</p>
+<blockquote>
 <p>后端要想支持跨域访问， 就不是仅仅返回JSON字符串， 而是加上回调函数名。以下为asp.net 中示例</p>
 </blockquote>
 <pre><code>var d = JsonConvert.SerializeObject(commentList);
-<span class="built_in">Response</span>.Write(<span class="built_in">Request</span>.Params[<span class="string">"callback"</span>] + <span class="string">"("</span> + d + <span class="string">")"</span> );
-<span class="built_in">Response</span>.<span class="keyword">End</span>();
-</code></pre><h4 id="前端调用演示">前端调用演示</h4><h4 id="使用_script_标签加载脚本的方式，跨域资源共享">使用 script 标签加载脚本的方式，跨域资源共享</h4><pre><code><span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span>&gt;</span><span class="fortran">
-    <span class="function"><span class="keyword">function</span></span> TestJSONP(<span class="type">data</span>){
-        console.<span class="built_in">log</span>(<span class="type">data</span>);
+Response.Write(Request.Params[&quot;callback&quot;] + &quot;(&quot; + d + &quot;)&quot; );
+Response.End();
+</code></pre><p>####前端调用演示</p>
+<h4 id="使用-script-标签加载脚本的方式，跨域资源共享"><a href="#使用-script-标签加载脚本的方式，跨域资源共享" class="headerlink" title="使用 script 标签加载脚本的方式，跨域资源共享"></a>使用 script 标签加载脚本的方式，跨域资源共享</h4><pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
+    function TestJSONP(data){
+        console.log(data);
     }
-</span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
-<span class="tag">&lt;<span class="title">script</span> <span class="attribute">type</span>=<span class="value">"text/javascript"</span> <span class="attribute">src</span>=<span class="value">"http://localhost:9003/default.aspx?callback=TestJSONP"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span>
+&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;http://localhost:9003/default.aspx?callback=TestJSONP&quot;&gt;&lt;/script&gt;
 </code></pre><p>请注意：这种方式首先定义一个函数 TestJSONP, 然后，在src属性中添加了查询字符串callback=TestJSONP</p>
-<h4 id="使用JQuery_跨域加载资源">使用JQuery 跨域加载资源</h4><pre><code>$<span class="class">.ajax</span>(<span class="rules">{
-    <span class="rule"><span class="attribute">url</span>:<span class="value"><span class="string">"http://localhost:9003/default.aspx"</span>,
-    dataType:<span class="string">"jsonp"</span>,
-    type:<span class="string">"GET"</span>,
-    success:<span class="function">function</span>(data){
-        console.<span class="function">log</span>(data)</span></span>;
-    }</span>
+<h4 id="使用JQuery-跨域加载资源"><a href="#使用JQuery-跨域加载资源" class="headerlink" title="使用JQuery 跨域加载资源"></a>使用JQuery 跨域加载资源</h4><pre><code>$.ajax({
+    url:&quot;http://localhost:9003/default.aspx&quot;,
+    dataType:&quot;jsonp&quot;,
+    type:&quot;GET&quot;,
+    success:function(data){
+        console.log(data);
+    }
 });
 </code></pre>
             <div class="clearfix"></div>
@@ -270,7 +273,7 @@
 </nav>
 
         <div class="duoshuo">
-<div class="ds-thread" data-thread-key="2016/01/02/跨域资源共享-JSONP/" data-title="跨域资源共享-JSONP" data-url="http://harrycheng.tk/2016/01/02/跨域资源共享-JSONP/"></div>
+<div class="ds-thread" data-thread-key="2016/01/02/跨域资源共享-JSONP/" data-title="跨域资源共享-JSONP" data-url="http://harrycheng.cn/2016/01/02/跨域资源共享-JSONP/"></div>
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"harrycheng"};
 (function() {

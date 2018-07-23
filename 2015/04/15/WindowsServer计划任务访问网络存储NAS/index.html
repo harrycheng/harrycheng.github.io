@@ -226,18 +226,18 @@
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<h2 id="Windows_计划任务访问网络存储(NAS),程序找不到路径解决办法">Windows 计划任务访问网络存储(NAS),程序找不到路径解决办法</h2><p>Windows 服务器端运行的软件，大多时需要开机自启，这时Windows 计划任务就是一个很好的选择。我在实践中总结了一些小经验，解决了“计划任务”访问<strong>网络存储(NAS)</strong>时,因<strong>用户没登陆</strong>，程序找不到网络路径而失败的问题。</p>
+      		<h2 id="Windows-计划任务访问网络存储-NAS-程序找不到路径解决办法"><a href="#Windows-计划任务访问网络存储-NAS-程序找不到路径解决办法" class="headerlink" title="Windows 计划任务访问网络存储(NAS),程序找不到路径解决办法"></a>Windows 计划任务访问网络存储(NAS),程序找不到路径解决办法</h2><p>Windows 服务器端运行的软件，大多时需要开机自启，这时Windows 计划任务就是一个很好的选择。我在实践中总结了一些小经验，解决了“计划任务”访问<strong>网络存储(NAS)</strong>时,因<strong>用户没登陆</strong>，程序找不到网络路径而失败的问题。</p>
 <p>关键有两点需要注意</p>
 <blockquote>
 <p>1、计划任务触发器设置为“任何用户登陆时触发”，并且仅在用户登录时运行。这样设置是因为NAS存储一般是要用户挂载的，这就需要用户在登录状态下。<br>2、设置Windows服务器自动登陆。NAS需要登录，登录后计划任务才能运行。WindowsServer默认是要用户输入密码才能登录的。这里要设置自登录。</p>
 </blockquote>
 <p>下面就以例子来说明 ：</p>
-<h3 id="(1)新建一个计划任务：">(1)新建一个计划任务：</h3><p><img src="/images/WindowsTask/NewTask.jpg" alt="NewTask.jpg"></p>
-<h3 id="(2)任务触发器，选择当前用户登陆时。">(2)任务触发器，选择当前用户登陆时。</h3><p><img src="/images/WindowsTask/TriggerConfig.jpg" alt="NewTask.jpg"></p>
-<h3 id="(3)摘要。勾选上“当单击完成时，打开此任务属性对话框”">(3)摘要。勾选上“当单击完成时，打开此任务属性对话框”</h3><p><img src="/images/WindowsTask/Info.jpg" alt="NewTask.jpg"></p>
-<h3 id="(4)辑触发器。在弹出的对话框中，选择触发器选项卡，点击编辑。设置为所有用户。适当延时。">(4)辑触发器。在弹出的对话框中，选择触发器选项卡，点击编辑。设置为所有用户。适当延时。</h3><p><img src="/images/WindowsTask/EditTrigger.jpg" alt="NewTask.jpg"></p>
-<h3 id="(5)一个建好的任务如图。">(5)一个建好的任务如图。</h3><p><img src="/images/WindowsTask/Show.jpg" alt="NewTask.jpg"></p>
-<h3 id="(6)Windows自登录。去掉勾选。">(6)Windows自登录。去掉勾选。</h3><p><code>命令行中输入 ： netplwiz</code><br><img src="/images/WindowsTask/AutoLogin.jpg" alt="NewTask.jpg"></p>
+<p>###(1)新建一个计划任务：<br><img src="/images/WindowsTask/NewTask.jpg" alt="NewTask.jpg"></p>
+<p>###(2)任务触发器，选择当前用户登陆时。<br><img src="/images/WindowsTask/TriggerConfig.jpg" alt="NewTask.jpg"></p>
+<p>###(3)摘要。勾选上“当单击完成时，打开此任务属性对话框”<br><img src="/images/WindowsTask/Info.jpg" alt="NewTask.jpg"></p>
+<p>###(4)辑触发器。在弹出的对话框中，选择触发器选项卡，点击编辑。设置为所有用户。适当延时。<br><img src="/images/WindowsTask/EditTrigger.jpg" alt="NewTask.jpg"></p>
+<p>###(5)一个建好的任务如图。<br><img src="/images/WindowsTask/Show.jpg" alt="NewTask.jpg"></p>
+<p>###(6)Windows自登录。去掉勾选。<br><code>命令行中输入 ： netplwiz</code><br><img src="/images/WindowsTask/AutoLogin.jpg" alt="NewTask.jpg"></p>
 <p>至此设置结束。重启服务器，将弹出”task Engine”启动的计划任务。</p>
 
             <div class="clearfix"></div>
@@ -253,7 +253,7 @@
 </nav>
 
         <div class="duoshuo">
-<div class="ds-thread" data-thread-key="2015/04/15/WindowsServer计划任务访问网络存储NAS/" data-title="WindowsServer计划任务访问网络存储NAS" data-url="http://harrycheng.tk/2015/04/15/WindowsServer计划任务访问网络存储NAS/"></div>
+<div class="ds-thread" data-thread-key="2015/04/15/WindowsServer计划任务访问网络存储NAS/" data-title="WindowsServer计划任务访问网络存储NAS" data-url="http://harrycheng.cn/2015/04/15/WindowsServer计划任务访问网络存储NAS/"></div>
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"harrycheng"};
 (function() {
