@@ -4,7 +4,7 @@ Welcome to [Hexo](http://hexo.io/)! This is your very first post. Check [documen
 
 
 ## New Environment Config
-```
+```bash
 git clone 
 
 npm install hexo --save 

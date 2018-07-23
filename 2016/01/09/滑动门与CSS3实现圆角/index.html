@@ -226,35 +226,36 @@
             </div>
         </div>
         <div class="col-md-8 col-md-offset-2">
-      		<h3 id="1、滑动门">1、滑动门</h3><p>所谓“滑动门”就是将一个圆角矩形图片切成如下两个图片，其中右图宽度大于所需要矩形的宽度。左图在右图上移动，可以形成一个不同宽度的圆角矩形。</p>
+      		<p>###1、滑动门<br>所谓“滑动门”就是将一个圆角矩形图片切成如下两个图片，其中右图宽度大于所需要矩形的宽度。左图在右图上移动，可以形成一个不同宽度的圆角矩形。</p>
 <p><img src="/images/SlidingDoor/left.png" alt="">    <img src="/images/SlidingDoor/right.png" alt=""></p>
-<h4 id="CSS_代码">CSS 代码</h4><pre><code><span class="tag">a</span> <span class="rules">{ 
-    <span class="rule"><span class="attribute">display </span>:<span class="value"> block</span></span>;
-    <span class="rule"><span class="attribute">height </span>:<span class="value"> <span class="number">40px</span></span></span>;
-    <span class="rule"><span class="attribute">float </span>:<span class="value"> left</span></span>;
-    <span class="rule"><span class="attribute">font-size</span>:<span class="value"><span class="number">1.2em</span></span></span>;
-    <span class="rule"><span class="attribute">background </span>:<span class="value"> <span class="function">url</span>(right.png) no-repeat right top</span></span>;
-    <span class="rule"><span class="attribute">margin-right</span>:<span class="value"><span class="number">2px</span></span></span>;
-    <span class="rule"><span class="attribute">text-decoration</span>:<span class="value">none
+<h4 id="CSS-代码"><a href="#CSS-代码" class="headerlink" title="CSS 代码"></a>CSS 代码</h4><pre><code>a { 
+    display : block;
+    height : 40px;
+    float : left;
+    font-size:1.2em;
+    background : url(right.png) no-repeat right top;
+    margin-right:2px;
+    text-decoration:none
 }
 
 a span{
-    display : block</span></span>;
-    <span class="rule"><span class="attribute">background </span>:<span class="value"> <span class="function">url</span>(left.png) no-repeat left top</span></span>;
-    <span class="rule"><span class="attribute">line-height</span>:<span class="value"><span class="number">40px</span></span></span>;
-}</span>
-</code></pre><h4 id="HTML">HTML</h4><pre><code><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span><span class="tag">&lt;<span class="title">span</span>&gt;</span>首页<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span>
-</code></pre><h3 id="2、CSS3">2、CSS3</h3><p>CSS3中可以使用boder-radius样式，使创建圆角矩形非常容易。 仅需在水平重复一个小图片， <img src="/images/SlidingDoor/tiny.png" alt=""> , 再设置border-radius 。</p>
-<pre><code><span class="tag">a</span> <span class="rules">{
-    <span class="rule"><span class="attribute">display </span>:<span class="value"> block</span></span>;
-    <span class="rule"><span class="attribute">height </span>:<span class="value"> <span class="number">40px</span></span></span>;
-    <span class="rule"><span class="attribute">line-height</span>:<span class="value"><span class="number">40px</span></span></span>;
-    <span class="rule"><span class="attribute">font-size</span>:<span class="value"><span class="number">1.2em</span></span></span>;
-    <span class="rule"><span class="attribute">float</span>:<span class="value">left</span></span>;
-    <span class="rule"><span class="attribute">background </span>:<span class="value"> <span class="function">url</span>(tiny.png) repeat-x</span></span>;
-    <span class="rule"><span class="attribute">border-top-left-radius </span>:<span class="value"> <span class="number">8px</span></span></span>;
-    <span class="rule"><span class="attribute">border-top-right-radius </span>:<span class="value"> <span class="number">8px</span></span></span>;
-}</span>
+    display : block;
+    background : url(left.png) no-repeat left top;
+    line-height:40px;
+}
+</code></pre><h4 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h4><pre><code>&lt;a href=&quot;#&quot;&gt;&lt;span&gt;首页&lt;/span&gt;&lt;/a&gt;
+</code></pre><p>###2、CSS3</p>
+<p>CSS3中可以使用boder-radius样式，使创建圆角矩形非常容易。 仅需在水平重复一个小图片， <img src="/images/SlidingDoor/tiny.png" alt=""> , 再设置border-radius 。</p>
+<pre><code>a {
+    display : block;
+    height : 40px;
+    line-height:40px;
+    font-size:1.2em;
+    float:left;
+    background : url(tiny.png) repeat-x;
+    border-top-left-radius : 8px;
+    border-top-right-radius : 8px;
+}
 </code></pre>
             <div class="clearfix"></div>
             <hr class="nogutter">
@@ -278,7 +279,7 @@ a span{
 </nav>
 
         <div class="duoshuo">
-<div class="ds-thread" data-thread-key="2016/01/09/滑动门与CSS3实现圆角/" data-title="滑动门与CSS3实现圆角" data-url="http://harrycheng.tk/2016/01/09/滑动门与CSS3实现圆角/"></div>
+<div class="ds-thread" data-thread-key="2016/01/09/滑动门与CSS3实现圆角/" data-title="滑动门与CSS3实现圆角" data-url="http://harrycheng.cn/2016/01/09/滑动门与CSS3实现圆角/"></div>
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"harrycheng"};
 (function() {
