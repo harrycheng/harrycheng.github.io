@@ -1,6 +1,26 @@
-title: Hello World
+title: Hello Hexo World
 ---
 Welcome to [Hexo](http://hexo.io/)! This is your very first post. Check [documentation](http://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](http://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues).
+
+
+## New Environment Config
+```
+git clone 
+
+npm install hexo --save 
+
+npm install hexo-deployer-git --save 
+
+npm install
+
+hexo generate
+
+hexo server
+
+ ```
+
+
+
 
 ## Quick Start
 
