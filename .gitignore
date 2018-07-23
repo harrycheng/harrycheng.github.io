@@ -1,7 +1,22 @@
 /public
+<<<<<<< HEAD
 public/
 /.deploy_git
 .deploy_git/
 db.json
 themes/TKL/.idea
 node_modules/
+=======
+
+public/
+
+/.deploy_git
+
+.deploy_git/
+
+db.json
+
+themes/TKL/.idea
+
+node_modules/
+>>>>>>> master

@@ -12,7 +12,11 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+<<<<<<< HEAD
 url: http://harrycheng.tk
+=======
+url: http://harrycheng.cn
+>>>>>>> master
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -54,6 +58,10 @@ tags:
 - Linux
 - PHP
 - 前端
+<<<<<<< HEAD
+=======
+- 小浩有话说
+>>>>>>> master
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
 ## You can customize the date format as defined in
