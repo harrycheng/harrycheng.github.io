@@ -7,3 +7,5 @@ git commit -m "auto deploy..."
 git push
 cd ../../hexoblog
 pause
+
+
