@@ -1,20 +1,20 @@
 # TKL
 TKL is a responsive design theme for Hexo.
-[Demo| Kieran's Blog](http://go.kieran.top/)
-###Install
+[Demo| Kieran's Blog](http://go.kieran.top/post/14/)
+### Install
 Execute the following command and modify theme in <code>_config.yml</code> to <code>TKL</code>.
 ```
 git clone https://github.com/SuperKieran/TKL.git
 ```
 <!--more-->
-###Update
+### Update
 Execute the following command to update TKL.
 ``` 
 cd themes/TKL
 git pull
 ```
-###Config
-####Theme_config.yml
+### Config
+#### Theme_config.yml
 ```
 cover: /img/bg_img.jpg
 logo: /img/logo.png
@@ -58,8 +58,18 @@ links:
   link: http://go.kieran.top/
 - name: Name
   link: http://domain.com/
+
+# Local search
+# Dependencies: https://github.com/flashlab/hexo-generator-search
+local_search:
+  enable: true
+# if auto, trigger search by changing input
+# if manual, trigger search by pressing enter key or search button
+  trigger: auto
+# show top n results per article, show all results by setting to -1
+  top_n_per_article: 2
 ```
-####Hexo_config.yml
+#### Hexo_config.yml
 change some code to enable archives page
 ```
 # Archives
@@ -70,16 +80,32 @@ archive: 1
 category: 1
 tag: 1
 ```
-###Icon
+Enable Seach
+Install hexo plugin at first: [hexo-generator-search-zip](https://github.com/SuperKieran/hexo-generator-search-zip)
+```
+search:
+  path: search.json
+  zipPath: search.zip
+  versionPath: searchVersion.txt
+  field: post
+```
+### Icon
 Seclet icon which you like in<code>\TKL\source\css\iconList.css</code>  
 ![](http://kieran-hexo.qiniudn.com/hexo_14_1.png)  
 ![](http://kieran-hexo.qiniudn.com/hexo_14_2.png)
-###Screen
+### Screen
 Show
 ![](http://kieran-hexo.qiniudn.com/hexo_14_3.png)
   
 Content
 ![](http://kieran-hexo.qiniudn.com/hexo_14_4.png)
-###Others
+### Others
 If you like this theme, [Fork](https://github.com/SuperKieran/TKL/fork) && Star.
 Come on.
+
+### Share Your Blog
+Write your blog here -> https://github.com/SuperKieran/TKL/issues/54
+
+### Wechat Group
+<img src="http://kieran-hexo.qiniudn.com/wechat.jpeg" width="300px" />
+如何加入 TKL 微信交流群？ 先加上面机器人为好友，然后发送 “TKL” 关键字，自动邀请进群

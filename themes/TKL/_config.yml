@@ -2,7 +2,7 @@
 cover: /img/bg_img.jpg
 logo: /img/logo.png
 top_saying:
-- title: YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.
+- title: Rome Wasn't Built in a Day!
 - content: 罗马不是一天建成的，大牛不是一下练成的。
 bottom_saying: Rome Wasn't Built in a Day!
 # Content
@@ -22,7 +22,7 @@ works:
 #  works_url: /atom.xml
 
 #duoshuo name
-duoshuo: harrycheng
+#duoshuo: harrycheng
 
 # Miscellaneous
 github: https://github.com/
@@ -44,3 +44,13 @@ links:
   link: http://go.kieran.top/
 - name: Cnblog
   link: http://www.cnblogs.com/harrycheng
+  
+ # Local search
+# Dependencies: https://github.com/flashlab/hexo-generator-search
+local_search:
+  enable: false
+  # if auto, trigger search by changing input
+  # if manual, trigger search by pressing enter key or search button
+  trigger: auto
+  # show top n results per article, show all results by setting to -1
+  top_n_per_article: 2
