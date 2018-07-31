@@ -10,8 +10,8 @@ excerpt_link: Read More
 archive: 1
 category: 1
 tag: 1
-#rss: /atom.xml
-about: /www.baidu.com/
+rss: /atom.xml
+#about: /www.baidu.com/
 highlightjs: vs
 
 #Works
@@ -23,6 +23,12 @@ works:
 
 #duoshuo name
 #duoshuo: harrycheng
+
+#disqus name
+disqus_shortname:
+
+#fancybox
+fancybox: true
 
 # Miscellaneous
 github: https://github.com/
