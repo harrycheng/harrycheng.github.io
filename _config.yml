@@ -78,3 +78,8 @@ deploy:
   type: git
   repo: git@github.com:harrycheng/harrycheng.github.io.git
   branch: master
+
+server:
+  port: 4001
+  compress: true
+  header: true
