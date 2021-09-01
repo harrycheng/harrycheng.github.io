@@ -1,4 +1,7 @@
 @echo off
+
+hexo generate
+
 xcopy public\*.* ..\masterMyblog\harrycheng.github.io\  /s /e /c /y /h /r
 cd ..\masterMyblog\harrycheng.github.io
 git add .
