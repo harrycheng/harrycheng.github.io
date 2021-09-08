@@ -39,10 +39,15 @@ weibo: http://weibo.com/
 
 #about  timeline
 timeline:
+
 - num: 1
-  word: "2013/6月 大学毕业，从事.NET开发"
+  word: "2021/9月 重拾Hexo 博客" 
 - num: 2
-  word: "2014/04/15 开始在GitCafe 搭建自己的私人博客，记录自己的经验，回馈大众"
+  word: "2017/11月 进入机加工行业，从事机床物联网开发"
+- num: 3
+  word: "2014/04/15 开始在Github 搭建自己的私人博客，记录自己的经验，回馈大众"
+- num: 4
+  word: "2013/6月 大学毕业，从事数字媒体行业.NET开发 、Java开发、JS开发"
 
 #Links
 links:
