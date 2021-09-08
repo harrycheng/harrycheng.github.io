@@ -1,4 +1,4 @@
-# harrycheng.github.io
+# harrycheng.github.io hexo static website
 
 # Get start
 
@@ -19,4 +19,13 @@ npm install
 
 ```
 hexo server
+```
+
+
+4. deploy  hexo to github
+
+```
+hexo clean
+hexo generate 
+hexo deploy
 ```
