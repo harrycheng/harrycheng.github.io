@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Archives: 2015/7 | HarryCheng&#39;s Blog</title>
+  <title>本博客加载速度的一次优化 | HarryCheng&#39;s Blog</title>
   <!-- Meta data -->
     <meta name="google-site-verification" content="tQ6sVNCEjkRurnHpkTaiJIS7rSrkxuYZuWy5qDNyMC4" />
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
@@ -60,7 +60,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -157,69 +157,104 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 
-      <!-- ============================ Hero Image =========================== -->
-
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h2>Rome Wasn't Built in a Day!</h2>
-                        <p></p>
-                        
-                        <h2></h2>
-                        <p>罗马不是一天建成的，大牛不是一下练成的。</p>
-                        
-
-                    </div>
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
-        <div class="herofade beige-dk"></div>
-    </div>
-</section>
-
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
-
-<!-- ============================ END Hero Image =========================== -->
-
-
-
-
-<section id="services">
+      
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/23/hello-world/">Hello Hexo World</a></h4>
-                            
-                            <p><time datetime="2015-07-23T06:25:40.000Z"><a href="/23/hello-world/">2015-07-23</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2016-06-24T15:49:07.000Z" itemprop="datePublished">
+          2016-06-24
+      </time>
+    
+    
+    | 
+    <a href='/tags/前端/'>前端</a>
+    
+    
+</span>
+                <h1>本博客加载速度的一次优化</h1>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 col-md-offset-2">
+      		<h3 id="博客搭建成功后一直没有绑定独立域名，访问时使用github的二级域名-速度的问题一直也没太在意-最近在万网买了域名绑定后-发现网站比较慢-所以决定用优化一下"><a href="#博客搭建成功后一直没有绑定独立域名，访问时使用github的二级域名-速度的问题一直也没太在意-最近在万网买了域名绑定后-发现网站比较慢-所以决定用优化一下" class="headerlink" title="博客搭建成功后一直没有绑定独立域名，访问时使用github的二级域名,速度的问题一直也没太在意. 最近在万网买了域名绑定后,发现网站比较慢.所以决定用优化一下."></a>博客搭建成功后一直没有绑定独立域名，访问时使用github的二级域名,速度的问题一直也没太在意. 最近在万网买了域名绑定后,发现网站比较慢.所以决定用优化一下.</h3><p>原加载速度如下图</p>
+<p><img src="/images/optimize_blog/before_optimize.png" width="100%"></p>
+<h3 id="我发现-加载最慢的就是背景图片1-jpg-除去一些不能再压缩的js-css-最后就是一些外链的woff2字体文件-所以优化就分两部走"><a href="#我发现-加载最慢的就是背景图片1-jpg-除去一些不能再压缩的js-css-最后就是一些外链的woff2字体文件-所以优化就分两部走" class="headerlink" title="我发现,加载最慢的就是背景图片1.jpg , 除去一些不能再压缩的js, css, 最后就是一些外链的woff2字体文件, 所以优化就分两部走:"></a>我发现,加载最慢的就是背景图片1.jpg , 除去一些不能再压缩的js, css, 最后就是一些外链的woff2字体文件, 所以优化就分两部走:</h3><h4 id="1-压缩图片"><a href="#1-压缩图片" class="headerlink" title="1. 压缩图片"></a>1. 压缩图片</h4><pre><code>使用一些图片压缩工具,将背景压缩变小.
+</code></pre><h4 id="2-将字体文件放在本地"><a href="#2-将字体文件放在本地" class="headerlink" title="2.将字体文件放在本地"></a>2.将字体文件放在本地</h4><pre><code>下载字体文件,放在本地.
+</code></pre><h3 id="经过简单的优化-我的博客"><a href="#经过简单的优化-我的博客" class="headerlink" title="经过简单的优化, 我的博客"></a>经过简单的优化, 我的博客</h3><p>现加载速度如下图</p>
+<p><img src="/images/optimize_blog/after_optimize.png" width="100%"></p>
+<p>效果还是比较明显的.</p>
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>Rome Wasn't Built in a Day!</p>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/23/小浩有话说/" style="float: left;">
+        ← 小浩看世界
+    </a>
+    
+    
+    <a class="pull-right" href="/09/滑动门与CSS3实现圆角/">
+        滑动门与CSS3实现圆角 →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 

@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Archives: 2015/7 | HarryCheng&#39;s Blog</title>
+  <title>WindowsServer计划任务访问网络存储NAS | HarryCheng&#39;s Blog</title>
   <!-- Meta data -->
     <meta name="google-site-verification" content="tQ6sVNCEjkRurnHpkTaiJIS7rSrkxuYZuWy5qDNyMC4" />
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
@@ -60,7 +60,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -157,69 +157,106 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 
-      <!-- ============================ Hero Image =========================== -->
-
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h2>Rome Wasn't Built in a Day!</h2>
-                        <p></p>
-                        
-                        <h2></h2>
-                        <p>罗马不是一天建成的，大牛不是一下练成的。</p>
-                        
-
-                    </div>
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
-        <div class="herofade beige-dk"></div>
-    </div>
-</section>
-
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
-
-<!-- ============================ END Hero Image =========================== -->
-
-
-
-
-<section id="services">
+      
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/23/hello-world/">Hello Hexo World</a></h4>
-                            
-                            <p><time datetime="2015-07-23T06:25:40.000Z"><a href="/23/hello-world/">2015-07-23</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2015-04-15T13:23:29.000Z" itemprop="datePublished">
+          2015-04-15
+      </time>
+    
+    
+    | 
+    <a href='/tags/WindowsServer运维/'>WindowsServer运维</a>
+    
+    
+</span>
+                <h1>WindowsServer计划任务访问网络存储NAS</h1>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 col-md-offset-2">
+      		<h2 id="Windows-计划任务访问网络存储-NAS-程序找不到路径解决办法"><a href="#Windows-计划任务访问网络存储-NAS-程序找不到路径解决办法" class="headerlink" title="Windows 计划任务访问网络存储(NAS),程序找不到路径解决办法"></a>Windows 计划任务访问网络存储(NAS),程序找不到路径解决办法</h2><p>Windows 服务器端运行的软件，大多时需要开机自启，这时Windows 计划任务就是一个很好的选择。我在实践中总结了一些小经验，解决了“计划任务”访问<strong>网络存储(NAS)</strong>时,因<strong>用户没登陆</strong>，程序找不到网络路径而失败的问题。</p>
+<p>关键有两点需要注意</p>
+<blockquote>
+<p>1、计划任务触发器设置为“任何用户登陆时触发”，并且仅在用户登录时运行。这样设置是因为NAS存储一般是要用户挂载的，这就需要用户在登录状态下。<br>2、设置Windows服务器自动登陆。NAS需要登录，登录后计划任务才能运行。WindowsServer默认是要用户输入密码才能登录的。这里要设置自登录。</p>
+</blockquote>
+<p>下面就以例子来说明 ：</p>
+<p>###(1)新建一个计划任务：<br><img src="/images/WindowsTask/NewTask.jpg" alt="NewTask.jpg"></p>
+<p>###(2)任务触发器，选择当前用户登陆时。<br><img src="/images/WindowsTask/TriggerConfig.jpg" alt="NewTask.jpg"></p>
+<p>###(3)摘要。勾选上“当单击完成时，打开此任务属性对话框”<br><img src="/images/WindowsTask/Info.jpg" alt="NewTask.jpg"></p>
+<p>###(4)辑触发器。在弹出的对话框中，选择触发器选项卡，点击编辑。设置为所有用户。适当延时。<br><img src="/images/WindowsTask/EditTrigger.jpg" alt="NewTask.jpg"></p>
+<p>###(5)一个建好的任务如图。<br><img src="/images/WindowsTask/Show.jpg" alt="NewTask.jpg"></p>
+<p>###(6)Windows自登录。去掉勾选。<br><code>命令行中输入 ： netplwiz</code><br><img src="/images/WindowsTask/AutoLogin.jpg" alt="NewTask.jpg"></p>
+<p>至此设置结束。重启服务器，将弹出”task Engine”启动的计划任务。</p>
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>Rome Wasn't Built in a Day!</p>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/21/AdobeFlashMediaServer直播入门/" style="float: left;">
+        ← AdobeFlashMediaServer直播入门
+    </a>
+    
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 

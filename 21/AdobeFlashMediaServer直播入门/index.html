@@ -17,7 +17,7 @@
 <!--<![endif]-->
 
 <head>
-  <title>Archives: 2015/7 | HarryCheng&#39;s Blog</title>
+  <title>AdobeFlashMediaServer直播入门 | HarryCheng&#39;s Blog</title>
   <!-- Meta data -->
     <meta name="google-site-verification" content="tQ6sVNCEjkRurnHpkTaiJIS7rSrkxuYZuWy5qDNyMC4" />
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
@@ -60,7 +60,7 @@
 </head>
 
 <!--
-<body class="home-template">
+<body class="post-template">
 -->
 <body id="index" class="lightnav animsition">
 
@@ -157,69 +157,180 @@
         <!-- ============================ Header & Logo bar =========================== -->
 
 
-      <!-- ============================ Hero Image =========================== -->
-
-<section id="hero" class="scrollme">
-    <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
-        <div class="row">
-            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
-                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
-                    <div>
-                        
-                        <h2>Rome Wasn't Built in a Day!</h2>
-                        <p></p>
-                        
-                        <h2></h2>
-                        <p>罗马不是一天建成的，大牛不是一下练成的。</p>
-                        
-
-                    </div>
-                </div>
-            </div>
-            <!-- // .col-md-12 -->
-        </div>
-        <div class="herofade beige-dk"></div>
-    </div>
-</section>
-
-<!-- Height spacing helper -->
-<div class="heightblock"></div>
-<!-- // End height spacing helper -->
-
-<!-- ============================ END Hero Image =========================== -->
-
-
-
-
-<section id="services">
+      
+<section id="intro">
     <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="row boxes">
-                    
-                    
-                        
-                        
-                        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
-                            
-                              <h4 class="title"><a href="/23/hello-world/">Hello Hexo World</a></h4>
-                            
-                            <p><time datetime="2015-07-23T06:25:40.000Z"><a href="/23/hello-world/">2015-07-23</a></time></p>
-                        </div>
-                    
-                </div>
-            </div>    
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2015-04-21T08:55:53.000Z" itemprop="datePublished">
+          2015-04-21
+      </time>
+    
+    
+    | 
+    <a href='/tags/音视频/'>音视频</a>
+    
+    
+</span>
+                <h1>AdobeFlashMediaServer直播入门</h1>
+            </div>
         </div>
-    </div>
-</section> 
+        <div class="col-md-8 col-md-offset-2">
+      		<p>##本文目的：使用Flash media server 5 搭建一个支持苹果HLS和Flash的最简直播系统.</p>
+<p>##基础知识：</p>
+<blockquote>
+<p>Adobe Flash Media Server:                服务器端软件，用于接收RTMP流。</p>
+</blockquote>
+<blockquote>
+<p>Apache 2.2：                            Adobe Flash Media Server 自带， 用做Web服务器， 支持HLS。</p>
+</blockquote>
+<blockquote>
+<p>Adobe Flash Media Live Encoder 3:  用于推送RTMP流</p>
+</blockquote>
+<p>##步骤：</p>
+<p>###1、安装、启动Adobe Flash Media Server5.0， apache2.2。 默认安装， 一路Next。注意记住所填的用户名、密码。<br>安装完成后：</p>
+<blockquote>
+<p><img src="/images/FlashMediaServer/start.jpg" alt=""></p>
+</blockquote>
+<blockquote>
+<p>（1）打开开始菜单点击“Start adobe media server5”启动FMS</p>
+</blockquote>
+<blockquote>
+<p>（2）打开开始菜单点击“Start adobe media administrator server 5”启动管理服务。</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>打开Adobe media Administator console, 启动管理界面。输入用户名，密码，成功进入管理界面。</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><img src="/images/FlashMediaServer/AdobeMediaServerConsole.jpg" alt="">  </p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><img src="/images/FlashMediaServer/login-ok.jpg" alt=""></p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>（3）启动Apache.找到安装路径/Adobe Media Server 5/Apache2.2/bin/ApacheMonitor.exe, 启动apache。</p>
+</blockquote>
+<blockquote>
+<p>若成功进入管理界面，并启动apache,安装成功。失败，请检查apache监听端口。</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><img src="/images/FlashMediaServer/AMS.jpg" alt=""></p>
+</blockquote>
+</blockquote>
+<p>###2、安装Adobe Flash Media Live Encoder， 一路next。安装后启动Adobe Flash Media Live Encoder，填写参数。点击connect &gt;start &gt;开始推流.</p>
+<p>注意两点：</p>
+<blockquote>
+<p>(1)Video 格式设置。 请选择h264</p>
+</blockquote>
+<blockquote>
+<p>(2)Stream to Flash Media server设置</p>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>FMS URL: rtmp://ip/livepkgr   其中，ip为FMS ip</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>Stream : livestream?adbe-live-event=liveevent</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p><img src="/images/FlashMediaServer/adobe-live-encoder.jpg" alt=""></p>
+</blockquote>
+</blockquote>
+<p>###3、若一切顺利，在Adobe media Administator console 管理界面有如下流信息。</p>
+<blockquote>
+<p><img src="/images/FlashMediaServer/livepkgr.jpg" alt=""></p>
+</blockquote>
+<p>###4、开始菜单中打开：“Adobe Media Server Start Screen”，自带的例子。如图输入参数，你就可以看到你自己推送的流了。</p>
+<blockquote>
+<p><img src="/images/FlashMediaServer/show.jpg" alt=""></p>
+</blockquote>
+<blockquote>
+<p>Mac ios 下, Safari中输入 <a href="http://ip/port/hls-live/livepkgr/_definst_/liveevent/livestream.m3u8" target="_blank" rel="noopener">http://ip/port/hls-live/livepkgr/_definst_/liveevent/livestream.m3u8</a>  就可以看真播了。</p>
+</blockquote>
+<p>至此一个最简的直接系统就完成了。</p>
 
-<section id="statement">
-    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
-        <div class="row">
-            <p>Rome Wasn't Built in a Day!</p>
+            <div class="clearfix"></div>
+            <hr class="nogutter">
         </div>
+        <nav class="m-pagination col-md-8 col-md-offset-2 col-sm-24" role="pagination">
+    
+    <a class="pull-left" href="/23/hello-world/" style="float: left;">
+        ← Hello Hexo World
+    </a>
+    
+    
+    <a class="pull-right" href="/15/WindowsServer计划任务访问网络存储NAS/">
+        WindowsServer计划任务访问网络存储NAS →
+    </a>
+    
+</nav>
+
+        <div class="col-md-8 col-md-offset-2 col-sm-24"><script type="text/javascript">
+  /**
+   * 搜狐畅言
+   */
+
+  /*
+  document.write('<div id="SOHUCS" sid="' + window.location.pathname.slice(1) + '" ></div>');
+
+  window.onload = function () {
+    (function () {
+      var appid = 'cytXXXX';
+      var conf = 'prod_xxxxxxxxxxxxxxxxx';
+      var width = window.innerWidth || document.documentElement.clientWidth;
+      var loadJs = function (d, a, id) {
+        var c = document.getElementsByTagName("head")[0] || document.head || document.documentElement;
+        var b = document.createElement("script");
+        b.setAttribute("type", "text/javascript");
+        b.setAttribute("charset", "UTF-8");
+        b.setAttribute("src", d);
+        if (id) {
+          b.setAttribute("id", id);
+        }
+        if (typeof a === "function") {
+          if (window.attachEvent) {
+            b.onreadystatechange = function () {
+              var e = b.readyState;
+              if (e === "loaded" || e === "complete") {
+                b.onreadystatechange = null;
+                a()
+              }
+            }
+          } else {
+            b.onload = a
+          }
+        }
+        c.appendChild(b)
+      };
+
+      loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
+        window.changyan.api.config({
+          appid: appid,
+          conf: conf
+        })
+      });
+    })();
+  }
+  */
+
+</script>
+</div>
     </div>
 </section>
+
+
       
 <!-- ============================ Footer =========================== -->
 
